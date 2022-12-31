@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript traversing</title>
+    <style>
+        #Grandfather {
+            border: 5px solid red;
+        }
+
+        #Father {
+            border: 5px solid green;
+        }
+
+        .Child {
+            border: 5px solid blue;
+        }
+        .Child1{
+            border:2px solid rgb(180, 72, 90)
+        }
+        .Child2{
+            border:2px solid rgb(225, 148, 4)
+        }
+    </style>
+    <script>
+        //I can write the js code before the clossing of head tag
+
+    </script>
+</head>
+
+<body>
+    <div id="Grandfather">
+        Grandfather
+        <div id="Father">
+            Father
+            <div class="Child">
+                <div class="Child1"> Child1</div>
+                <div class="Child2">Child2</div>
+            </div>
+        </div>
+    </div>
+
+    <table border="3">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Surname
+                </th>
+                <th>
+                    contact-no.
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Vishnu
+                </td>
+                <td>
+                    jaat
+                </td>
+                <td>
+                    9755526285
+                </td>
+                <td>
+                    <button data-id="d1" onclick="deleted(this)" style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Pankaj
+                </td>
+                <td>
+                    rathor
+                </td>
+                <td>
+                    7886874874
+                </td>
+                <td>
+                    <button data-id="d2" onclick="deleted(this)" style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Goutam
+                </td>
+                <td>
+                    Sharma
+                </td>
+                <td>
+                    7856559384
+                </td>
+                <td>
+                    <button data-id="d3" onclick="deleted(this)" style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Rakesh
+                </td>
+                <td>
+                    kharol
+                </td>
+                <td>
+                    8583458340
+                </td>
+                <td>
+                    <button data-id="d4" onclick="deleted(this)" style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Virendra
+                </td>
+                <td>
+                    Jaat
+                </td>
+                <td>
+                    9826583489
+                </td>
+                <td>
+                    <button data-id="d5" onclick="deleted(this)" style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src=""> // this tag use we can write the js code Externaly</script>
+    <script>
+        // I can write js code before the clossing of body tag
+        // traversing parent to child using (document.querySelector)
+        console.log()
+        let C1 = document.querySelector('.Child1');
+        C1.innerHTML = 'Children1';
+        C1.style.border = '5px solid purple';
+
+        // child to parent traversing using clossest method
+        let Gp = document.querySelector('.Child2');
+        console.log(Gp);
+
+        //parent to child traversing we use 'document.querySelector()'
+        let ltd = document.querySelector('table tbody tr td:nth-child(2)');
+        console.log(ltd);
+        ltd.style.color = 'green';
+        // child to parent traversing 'closest method'
+        let tbody = ltd.closest('tbody');
+
+        //parent to child traversing  'document.querySelector'
+        let Goutamtd = tbody.querySelector('tr:nth-child(3) td:first-child');
+        console.log(Goutamtd);
+        console.log(tbody);
+        Goutamtd.style.color = 'orange';
+    </script>
+    <script>
+        // I can write js code before the clossing of body tag
+        function deleted(elem){
+            console.log(elem);
+            let tr = elem.closest('tr');
+            tr.remove();
+            console.log(tr);
+        }
+    </script>
+</body>
+</html>
