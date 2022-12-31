@@ -18,11 +18,13 @@
         .Child {
             border: 5px solid blue;
         }
-        .Child1{
-            border:2px solid rgb(180, 72, 90)
+
+        .Child1 {
+            border: 2px solid rgb(180, 72, 90)
         }
-        .Child2{
-            border:2px solid rgb(225, 148, 4)
+
+        .Child2 {
+            border: 2px solid rgb(225, 148, 4)
         }
     </style>
     <script>
@@ -36,7 +38,7 @@
         Grandfather
         <div id="Father">
             Father
-            <div class="Child">
+            <div class="Child">Child
                 <div class="Child1"> Child1</div>
                 <div class="Child2">Child2</div>
             </div>
@@ -72,7 +74,8 @@
                     9755526285
                 </td>
                 <td>
-                    <button data-id="d1" onclick="deleted(this)" style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
+                    <button data-id="d1" onclick="deleted(this)"
+                        style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
                 </td>
             </tr>
             <tr>
@@ -86,7 +89,8 @@
                     9098748345
                 </td>
                 <td>
-                    <button data-id="d2" onclick="deleted(this)" style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
+                    <button data-id="d2" onclick="deleted(this)"
+                        style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
                 </td>
             </tr>
             <tr>
@@ -100,7 +104,8 @@
                     7886874874
                 </td>
                 <td>
-                    <button data-id="d3" onclick="deleted(this)" style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
+                    <button data-id="d3" onclick="deleted(this)"
+                        style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
                 </td>
             </tr>
             <tr>
@@ -114,7 +119,8 @@
                     7856559384
                 </td>
                 <td>
-                    <button data-id="d4" onclick="deleted(this)" style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
+                    <button data-id="d4" onclick="deleted(this)"
+                        style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
                 </td>
             </tr>
             <tr>
@@ -128,7 +134,8 @@
                     8583458340
                 </td>
                 <td>
-                    <button data-id="d5" onclick="deleted(this)" style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
+                    <button data-id="d5" onclick="deleted(this)"
+                        style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
                 </td>
             </tr>
             <tr>
@@ -142,7 +149,8 @@
                     9826583489
                 </td>
                 <td>
-                    <button data-id="d6" onclick="deleted(this)" style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
+                    <button data-id="d6" onclick="deleted(this)"
+                        style="color:white;background: rgb(244, 43, 43);border-radius: 3px; border: none;">Delete</button>
                 </td>
             </tr>
         </tbody>
@@ -175,7 +183,7 @@
     </script>
     <script>
         // I can write js code before the clossing of body tag
-        function deleted(elem){
+        function deleted(elem) {
             console.log(elem);
             let tr = elem.closest('tr');
             tr.remove();
@@ -183,4 +191,5 @@
         }
     </script>
 </body>
+
 </html>
